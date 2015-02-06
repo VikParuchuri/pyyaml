@@ -71,7 +71,6 @@ class Reader(object):
         self.column = 0
         if isinstance(stream, str):
             self.name = "<unicode string>"
-            self.check_printable(stream)
             self.buffer = stream+'\0'
         elif isinstance(stream, bytes):
             self.name = "<byte string>"
